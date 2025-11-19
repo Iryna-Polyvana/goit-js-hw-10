@@ -4,7 +4,6 @@ import iziToast from "izitoast";
 let userSelectedDate;
 const startBtn = document.querySelector('button');
 const dateInput = document.querySelector('#datetime-picker');
-console.log(dateInput);
 startBtn.disabled = true;
 const calendar = flatpickr('#datetime-picker', {
     enableTime: true,
@@ -85,7 +84,3 @@ const timer = {
         return String(value).padStart(2, '0');
     },
 };
-
-
-console.log(timer);
-
