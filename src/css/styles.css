@@ -20,3 +20,224 @@
 
 @import "flatpickr/dist/flatpickr.min.css";
 @import "izitoast/dist/css/iziToast.min.css";
+
+/* Timer styles */
+.data-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 36px;
+  margin-left: 156px;
+}
+
+.css-data-input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.css-data-input:hover {
+  border: 1px solid #000;
+}
+
+.css-data-input:focus,
+.css-data-input:active {
+  border-color: #4e75ff;
+  outline: none;
+  color: #000;
+}
+
+.css-data-input:disabled {
+  color: #808080;
+}
+
+
+.start-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: transparent;
+  background-color: #4e75ff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  min-width: 75px;
+  height: 40px;
+}
+
+.start-btn:hover {
+  background: #6c8cff;
+}
+
+.start-btn:disabled {
+  color: #989898;
+  background-color: #cfcfcf;
+}
+
+.timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 346px;
+  height: 72px;
+  margin-top: 32px;
+  margin-left: 156px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0px;
+  width: auto;
+}
+
+.value {
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  color: #2e2f42;
+  text-transform: uppercase;
+}
+
+/* Form styles */
+.form-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  width: 360px;
+  height: 72px;
+  margin-bottom: 16px;
+}
+
+.input-delay {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+}
+
+.input-delay:focus,
+.input-delay:hover {
+  outline: none;
+  border: 1px solid #000;
+}
+
+.input-delay:active {
+  border: 1px solid #4e75ff;
+}
+
+.fieldset {
+  margin-inline-start: 0;
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+  gap: 48px;
+  width: 360px;
+  padding: 14px 48px 8px 48px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 24px;
+}
+
+.fieldset:hover, .fieldset:active {
+  stroke: #000;
+}
+
+.radio-btn-label {
+  width: 104px;
+  height: 32px;
+}
+
+.create-notification-btn {
+  display: block;
+  margin-left: 0;
+  width: 360px;
+  height: 40px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  border: none;
+}
+
+.fieldset legend {
+  text-align: left;
+}
+
+.create-notification-btn:hover {
+  background-color: #6c8cff;
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.custom-radio {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #757575;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #4c6ef5;
+  /* синій */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s;
+}
+
+/* Активний стан */
+input[type="radio"]:checked+.custom-radio {
+  border-color: #4c6ef5;
+}
+
+input[type="radio"]:checked+.custom-radio::after {
+  transform: translate(-50%, -50%) scale(1);
+}
